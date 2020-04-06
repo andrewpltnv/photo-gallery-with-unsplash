@@ -1,0 +1,29 @@
+.item--preview{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+}
+.photo--preview{
+    width: 13vw;
+    height: 13vw;
+}
+.author--name{
+    width: auto;
+    margin: 0;
+    padding: 0.3em 0.3em 0.3em 2vw;
+    font-family: Wandery, serif;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.buttons{
+    margin-left: auto;
+    width: 186px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.button{
+    height: 80%;
+    width: 80%;
+}

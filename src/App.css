@@ -1,0 +1,19 @@
+html{
+
+}
+
+.App {
+  height: 100%;
+  min-width: 570px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+#space{
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+

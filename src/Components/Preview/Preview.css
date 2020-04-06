@@ -1,0 +1,21 @@
+.preview{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 560px;
+    margin: auto;
+}
+.item--preview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 5px 15px 15px;
+    min-width: 210px;
+}
+.author--name{
+    margin: 0;
+    padding: 0.7em 0.3em 0.3em 20px;
+    font-family: Wandery, serif;
+    font-size: 1em;
+    font-weight: 400;
+}

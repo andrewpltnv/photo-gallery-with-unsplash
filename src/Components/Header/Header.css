@@ -1,0 +1,38 @@
+header {
+    min-height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vw;
+    margin-bottom: 0.5vh;
+}
+.header--link{
+    font-family: GENUINE, monospace ;
+    text-decoration: none;
+    font-size: 6.5vmin;
+    letter-spacing: 0.137em;
+}
+@media all and (min-width: 400px){
+    header {
+        margin-bottom: 2vh;
+    }
+}
+@media all and (min-width: 600px){
+    header {
+        margin-bottom: 3vh;
+    }
+}
+@media all and (min-width: 800px){
+    header {
+        padding-top: 2vw;
+    }
+    .header--link{
+        font-size: 5vmin;
+    }
+}
+
+
+.header--link:visited{
+    color: rgba(0, 0, 0, 0.32);
+}
