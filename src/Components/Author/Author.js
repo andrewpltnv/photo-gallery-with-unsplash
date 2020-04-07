@@ -15,6 +15,10 @@ export default function Author (props) {
   const buttons = props.images.map((item,index) => {
     return (
       <button className="button" key={index}
+              style={{
+                backgroundImage: 'url(' + props.images[index].regular + ')',
+                backgroundSize:"contain"
+              }}
               onClick={() => props.select(props.images[index].regular)}
       />
     );

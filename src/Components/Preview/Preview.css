@@ -31,6 +31,7 @@
     display: flex;
     width: 96%;
     gap: 14px;
+    overflow-x: scroll;
 }
 .author--name{
     margin: 0;

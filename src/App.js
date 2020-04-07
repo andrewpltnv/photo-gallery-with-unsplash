@@ -21,7 +21,7 @@ export default function App() {
   };
 
   useEffect(()=>{
-    unsplash.search.collections(word, page, 9)
+    unsplash.search.collections(word, page, 8)
       .then(toJson)
       .then(json => {
         setData(json.results);
