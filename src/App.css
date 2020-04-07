@@ -1,10 +1,9 @@
-html{
-
+:root{
+  --change-size: 640px;
 }
 
 .App {
   height: 100%;
-  min-width: 570px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -12,8 +11,14 @@ html{
 #space{
   width: 100%;
   display: flex;
-  margin: auto;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+@media all and (max-width: 640px){
+  #space{
+    flex-direction: column;
+  }
 }
 

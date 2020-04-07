@@ -2,8 +2,12 @@
     display: flex;
     width: 100%;
 }
-.image{
+.image--true{
     width:99%;
-    margin: 2vh auto 1vh auto;
+    margin: 13px 12px 12px 12px;
     height: max-content;
+}
+.image--false{
+    margin: 13px 12px 12px 12px;
+    width: 70%;
 }

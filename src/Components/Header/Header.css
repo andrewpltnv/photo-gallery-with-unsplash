@@ -4,16 +4,19 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 3vw;
-    margin-bottom: 0.5vh;
+    padding-top: 14px;
+    margin-bottom: 4px;
 }
 .header--link{
     font-family: GENUINE, monospace ;
     text-decoration: none;
-    font-size: 6.5vmin;
+    font-size: 30px;
     letter-spacing: 0.137em;
 }
-@media all and (min-width: 400px){
+.header--link:visited{
+    color: rgba(0, 0, 0, 0.32);
+}
+/*@media all and (min-width: 400px){
     header {
         margin-bottom: 2vh;
     }
@@ -28,11 +31,6 @@ header {
         padding-top: 2vw;
     }
     .header--link{
-        font-size: 5vmin;
+        font-size: 30px;
     }
-}
-
-
-.header--link:visited{
-    color: rgba(0, 0, 0, 0.32);
-}
+}*/
