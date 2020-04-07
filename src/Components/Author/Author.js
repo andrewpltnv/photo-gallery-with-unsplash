@@ -10,20 +10,25 @@ export default function Author (props) {
     "#456ef5",
   ];
 
-  const _name = (props.name.length < 11)?props.name:props.name.slice(0,11).concat(" ...");
+  const _name = (props.name.length < 16)?props.name:props.name.slice(0,16).concat(" ...");
+
+  const buttons = props.images.map((item,index) => {
+    return (
+      <button className="button" key={index}
+              onClick={() => props.select(props.images[index].regular)}
+      />
+    );
+  });
 
   return (
     <div className="item--preview">
-      <h4 className="author--name"
+      <div className="buttons">
+        {buttons.slice(0,2)}
+          <h4 className="author--name"
           style={{color: ink,cursor: "cell"}}
           onClick={()=>Painting()}>{_name}
-      </h4>
-      <div className="buttons">{
-        props.images.map((item,index) => {
-          return (
-            <button className="button" key={index} onClick={() => props.select(props.images[index].regular)}/>
-          );
-        })}
+          </h4>
+        {buttons.slice(2,4)}
       </div>
     </div>
   );

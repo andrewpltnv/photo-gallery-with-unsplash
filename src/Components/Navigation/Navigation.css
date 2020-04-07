@@ -1,0 +1,11 @@
+.navigation{
+    width: auto;
+    margin-left: 18px;
+    display: grid;
+    grid-template-columns: 40px 50px 35px;
+    justify-content: space-between;
+}
+.navigation button{
+    width: auto;
+    height: 35px;
+}

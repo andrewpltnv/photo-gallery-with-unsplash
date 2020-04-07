@@ -1,101 +1,45 @@
 .form{
     margin-left: 15px;
     padding-right: 10px;
-    width: auto;
+    padding-top: 4px;
+    width: 213px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 .form input{
-    width: 92px;
+    width: 132px;
     padding-left: 4px;
 }
 .form button{
     margin-left: 4px;
     width: 35px;
     height: 35px;
-}
-.preview{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 12px 0 auto 0;
-    padding-bottom: 20px;
+    padding: 0;
+    background-color: inherit;
+    border-color: transparent;
 }
 .item--preview{
     display: flex;
     flex-direction: column;
-    margin: 4px 0 0 0;
+    margin: auto auto 10px auto;
     max-width: 210px;
+}
+.preview{
+    margin: 12px 22px 0 18px;;
+    padding-bottom: 10px;
+    display: flex;
+    width: 96%;
+    gap: 14px;
 }
 .author--name{
     margin: 0;
     height: 22px;
     white-space: nowrap;
     overflow: hidden;
-    padding: 0.7em 0.3em 0.3em 20px;
+    padding: 0 0.3em 0.3em 0.3em;
+    font-size: 0.85em;
     font-family: Wandery, serif;
-    font-size: 1em;
     font-weight: 400;
     text-overflow: ellipsis;
-}
-.navigation{
-    margin: 30px auto auto 24px;
-    padding-right: 16px;
-    width: auto;
-    display: grid;
-    grid-template-columns: 40px 50px 35px;
-    align-items: center;
-    justify-content: space-between;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-.navigation button{
-    width: auto;
-    height: 35px;
-}
-@media all and (max-width: 640px){
-    .preview{
-        width: 96%;
-        margin: 0 2% 0 2%;
-        display: grid;
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 160px auto auto;
-    }
-    .form {
-        margin: auto 0 10px 18px;
-    }
-}
-@media all and (max-width: 500px){
-    .preview{
-        width: 96%;
-        margin: 0 2% 0 2%;
-        display: grid;
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 160px 50%;
-    }
-    .form {
-        margin: auto 0 10px 18px;
-    }
-    .navigation{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
-}
-@media all and (max-width: 340px){
-    .preview{
-        grid-template-rows: auto auto auto auto auto auto;
-        grid-template-columns: 100%;
-        padding-left: 20%;
-    }
-    .navigation{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 12;
-        grid-row-end: 13;
-    }
 }

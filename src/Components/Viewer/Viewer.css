@@ -1,13 +1,14 @@
 .viewer{
     display: flex;
-    width: 100%;
+    width: 50%;
 }
 .image--true{
-    width:99%;
+    object-fit: cover;
     margin: 13px 12px 12px 12px;
-    height: max-content;
+    height: 468px;
 }
 .image--false{
+    object-fit: scale-down;
     margin: 13px 12px 12px 12px;
-    width: 70%;
+    height: 500px;
 }

@@ -1,12 +1,12 @@
 footer {
     background-color: #e3e3e3;
     width: 100%;
-    max-height: 10vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
     margin-top: 0.1vh;
+    height: 33px;
 }
 .footer--text{
      margin: 0;
@@ -16,20 +16,5 @@ footer {
      font-size: 1em;
      font-weight: 400;
  }
-@media all and (min-width: 600px){
-    footer{
-        max-height: 6vw;
-    }
-    .footer--text{
-        font-size: 1em;
-    }
-}
-@media all and (min-width: 900px){
-    footer{
-        max-height: 4vw;
-    }
-    .footer--text{
-        font-size: 1em;
-    }
-}
+
 
