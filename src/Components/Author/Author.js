@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import "./Author.css";
 
 export default function Author (props) {
-  const [isActive, toggle] = useState(false);
   const [ink, paint] = useState("black");
   const colors = [
     "#872790",
@@ -14,7 +13,7 @@ export default function Author (props) {
   const _name = (props.name.length < 11)?props.name:props.name.slice(0,11).concat(" ...");
 
   return (
-    <div className="item--preview" onClick={()=>{toggle(!isActive);}}>
+    <div className="item--preview">
       <h4 className="author--name"
           style={{color: ink,cursor: "cell"}}
           onClick={()=>Painting()}>{_name}
@@ -22,9 +21,7 @@ export default function Author (props) {
       <div className="buttons">{
         props.images.map((item,index) => {
           return (
-            <button className="button" key={index}
-                    onClick={() => props.onClick(props.images[index].regular)}
-            />
+            <button className="button" key={index} onClick={() => props.select(props.images[index].regular)}/>
           );
         })}
       </div>

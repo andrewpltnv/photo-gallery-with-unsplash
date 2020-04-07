@@ -12,7 +12,7 @@ export default function SearchForm(props) {
   };
 
   return(
-    <form className="form" target="_self" onSubmit={handleSubmit}>
+    <form className="form" id="form" target="_self" onSubmit={handleSubmit}>
       <input type="text" onChange={handleChange} value={input} minLength="1" maxLength="10"/>
       <button type="submit" onSubmit={handleSubmit} >+</button>
     </form>

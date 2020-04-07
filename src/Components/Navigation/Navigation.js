@@ -1,41 +1,41 @@
 import React from 'react';
 
 export default function Navigation(props) {
-  const current = props.pages.current;
-  const total = props.pages.total;
+  const total = props.total;
+  const page = props.page;
 
-  const handleNavigation = (action) => {
+  const handleNavigation = (temp,event) => {
+    event.preventDefault();
+    props.handleNavigation(temp);
+  };
+
+  const handleReducer = (action, event) => {
     switch (action) {
       case "next":
-        if(current+1 === total){
-          props.handleNavigation({current: 0, total: total})
-        } else props.handleNavigation({current: current+1, total: total});
+        if(page+1 === total){
+          handleNavigation(0, event)
+        } else handleNavigation(page + 1, event);
         break;
       case "back":
-        if(current === 0){
-          props.handleNavigation({current: total-1, total: total})
-        } else props.handleNavigation({current: current-1, total: total});
+        if(page === 1){
+          handleNavigation(10, event)
+        } else handleNavigation(page-1,event);
         break;
       default:
-        props.handleNavigation({current: 0, total: total});
+        handleNavigation(1,event);
         break;
     }
   };
-  console.log("total "+total);
+
   return(
-    <form className="navigation">
-      <button onClick={(event) => {
-        handleNavigation("back");
-        event.preventDefault();
-      }} >-</button>
-      <button onClick={(event) => {
-        handleNavigation("base");
-        event.preventDefault();
-      }} >{current}</button>
-      <button onClick={(event) => {
-        handleNavigation("next");
-        event.preventDefault();
-      }} >+</button>
+    <form className="navigation" id="navigation">
+      <button onClick={(event) => handleReducer("base", event)} >{page}</button>
+      <button onClick={(event) => handleReducer("next", event)} >+</button>
+      {
+        (page > 1)
+          ?<button onClick={(event) => handleReducer("back", event)} >-</button>
+          :<></>
+      }
     </form>
   );
 }
