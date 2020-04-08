@@ -9,7 +9,7 @@ import Unsplash, {toJson} from "unsplash-js/lib/unsplash";
 const unsplash = new Unsplash({accessKey: "mPLF8epcvlND9fF_jRCEoHDjoFRKGpJwfvOF3u2hNY8"});
 
 export default function App() {
-  const [selected, select] = useState(false);
+  const [selected, select] = useState("https://images.unsplash.com/photo-1491933367339-d869a4dcc137?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max");
   const [word, setWord] = useState('Fox');
   const [data,setData] = useState();
   const [flag,setFlag] = useState(false);
@@ -29,8 +29,18 @@ export default function App() {
       });
   },[page,word]);
 
+  const [style,setStyle] = useState({'':''});
+  useEffect(()=>{
+    const temp = {
+      backgroundImage: ('url(' + selected.toString() + ')'),
+      opacity: 0.9
+    };
+    setStyle(temp);
+  },[selected]);
+
+
   return (
-    <div className="App">
+    <div className="App" style={style}>
       <Header handleSearch={handleSearch}>Photo Gallery</Header>
       <div id="space">
         <Viewer image={selected}/>

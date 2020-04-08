@@ -10,11 +10,13 @@ header {
 .header--link{
     font-family: GENUINE, monospace ;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 32px;
     letter-spacing: 0.137em;
 }
 .header--link:visited{
-    color: rgba(0, 0, 0, 0.32);
+    color: #fbffff;
+    text-decoration: #282828;
+
 }
 /*@media all and (min-width: 400px){
     header {

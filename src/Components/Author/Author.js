@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import "./Author.css";
 
 export default function Author (props) {
-  const [ink, paint] = useState("black");
+  const [ink, paint] = useState("white");
   const colors = [
-    "#872790",
-    "#d3616b",
+    "#f445fd",
+    "#f9737f",
     "#ef65ff",
     "#456ef5",
   ];

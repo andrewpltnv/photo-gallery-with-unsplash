@@ -1,11 +1,14 @@
 .navigation{
-    width: auto;
+    width: 90px;
     margin-left: 18px;
     display: grid;
-    grid-template-columns: 40px 50px 35px;
+    grid-template-columns: 40px 50px 45px;
     justify-content: space-between;
 }
 .navigation button{
+    margin: 5px;
     width: auto;
-    height: 35px;
+    height: 32px;
+    background-color: #282828;
+    color: white;
 }
