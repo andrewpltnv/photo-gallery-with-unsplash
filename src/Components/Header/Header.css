@@ -5,6 +5,7 @@ header {
     align-items: center;
     justify-content: center;
     padding-top: 14px;
+    padding-left: 14px;
     margin-bottom: 4px;
 }
 .header--link{
@@ -16,11 +17,12 @@ header {
 .header--link:visited{
     color: rgba(0, 0, 0, 0.32);
 }
-/*@media all and (min-width: 400px){
+@media all and (max-width: 360px){
     header {
+        flex-direction: column;
         margin-bottom: 2vh;
     }
-}
+}/*
 @media all and (min-width: 600px){
     header {
         margin-bottom: 3vh;
