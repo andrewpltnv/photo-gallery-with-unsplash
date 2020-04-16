@@ -10,8 +10,10 @@ export default function Preview(props) {
   },[props.data]);
 
   return (
-    <div className="preview">
-      {data?data.map((item,index)=>(itemRender(item.images,item.name,index))):<></>}
+    <div className="wrapper">
+      <div className="preview">
+        {data?data.map((item,index)=>(itemRender(item.images,item.name,index))):<></>}
+      </div>
     </div>
   );
   /*
