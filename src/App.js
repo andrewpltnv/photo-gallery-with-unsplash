@@ -9,7 +9,7 @@ import Unsplash, {toJson} from "unsplash-js/lib/unsplash";
 const unsplash = new Unsplash({accessKey: "mPLF8epcvlND9fF_jRCEoHDjoFRKGpJwfvOF3u2hNY8"});
 
 export default function App() {
-  const [selected, select] = useState("https://images.unsplash.com/photo-1491933367339-d869a4dcc137?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max");
+  const [selected, select] = useState("https://instagram.fiev18-1.fna.fbcdn.net/v/t51.2885-15/e35/s1080x1080/91207066_2829312010634062_7000031126740627651_n.jpg?_nc_ht=instagram.fiev18-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=dDrt1EzUzJ8AX9XT2xE&oh=9d8b2e1b1c650ac2d9bc1b2fbcf7872d&oe=5EAE07F5");
   const [word, setWord] = useState('Fox');
   const [data,setData] = useState();
   const [flag,setFlag] = useState(false);
@@ -21,7 +21,7 @@ export default function App() {
   };
 
   useEffect(()=>{
-    unsplash.search.collections(word, page, 8)
+    unsplash.search.collections(word, page, 4)
       .then(toJson)
       .then(json => {
         setData(json.results);
@@ -29,27 +29,16 @@ export default function App() {
       });
   },[page,word]);
 
-  const [style,setStyle] = useState({'':''});
-  useEffect(()=>{
-    const temp = {
-      backgroundImage: ('url(' + selected.toString() + ')'),
-      opacity: 0.9
-    };
-    setStyle(temp);
-  },[selected]);
-
-
   return (
-    <div className="App" style={style}>
-      <Header handleSearch={handleSearch}>Photo Gallery</Header>
-      <div id="space">
-        <Viewer image={selected}/>
-        <div id="table"> </div>
-      </div>
-      <Footer>
+    <div className="App">
+      <Header text={"Photo Gallery"} handleSearch={handleSearch}>
         <Navigation page={page} total={20} handleNavigation={setPage}/>
-      </Footer>
-      {flag?<Preview data={data} select={select}/>:<></>}
+      </Header>
+      <div id="space">
+        {flag?<Preview data={data} select={select}/>:<></>}
+        <Viewer image={selected}/>
+      </div>
+      <Footer/>
     </div>
   );
 }

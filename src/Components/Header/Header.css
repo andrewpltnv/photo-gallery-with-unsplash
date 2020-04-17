@@ -3,9 +3,9 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 14px;
-    padding-left: 14px;
+    padding-left: 34px;
     margin-bottom: 4px;
 }
 .header--link{
@@ -15,21 +15,24 @@ header {
     letter-spacing: 0.137em;
 }
 .header--link:visited{
-    color: #fbffff;
+    color: rgba(0, 0, 0, 0.71);
     text-decoration: #282828;
-
+}
+#controls{
+    display: flex;
+    flex-direction: row;
 }
 @media all and (max-width: 360px){
     header {
         flex-direction: column;
         margin-bottom: 2vh;
     }
-}/*
-@media all and (min-width: 600px){
-    header {
-        margin-bottom: 3vh;
-    }
 }
+@media all and (max-width: 740px){
+    #controls{
+        flex-direction: column;
+    }
+}/*
 @media all and (min-width: 800px){
     header {
         padding-top: 2vw;

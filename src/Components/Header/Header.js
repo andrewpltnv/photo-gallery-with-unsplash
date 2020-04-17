@@ -11,9 +11,12 @@ export default function Header(props) {
          className="header--link"
          onClick={()=>window.location.reload(true)}
       >
-        {props.children}
+        {props.text}
       </a>
-      <SearchForm handleSearch={props.handleSearch}/>
+      <div id="controls">
+        <SearchForm handleSearch={props.handleSearch}/>
+        {props.children}
+      </div>
     </header>
   );
 }

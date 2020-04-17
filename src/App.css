@@ -10,17 +10,20 @@
 #space{
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: flex-start;
   margin: auto;
 }
-@media all and (max-width: 640px){
+@media all and (max-width: 980px){
   #space{
     flex-direction: column;
   }
   .viewer{
-    width: 100%!important;
+    width: 100% !important;
+  }
+  .preview{
+    height: 160px;
   }
 }
 

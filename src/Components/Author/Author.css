@@ -20,10 +20,6 @@
     gap: 6px;
 }
 .button{
-    border-radius: 15%;
-    border-color: white 1px 0 1px 2px;
     height: 114%;
     width: 96%;
-    background-color: transparent;
-    /*border-color: transparent;*/
 }

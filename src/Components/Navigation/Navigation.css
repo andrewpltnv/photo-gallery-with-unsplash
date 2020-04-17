@@ -1,5 +1,6 @@
 .navigation{
-    width: 90px;
+    width: 130px;
+    padding-right: 20px;
     margin-left: 18px;
     display: grid;
     grid-template-columns: 40px 50px 45px;
@@ -9,6 +10,6 @@
     margin: 5px;
     width: auto;
     height: 32px;
-    background-color: #282828;
-    color: white;
+    background-color: rgba(108, 108, 108, 0.41);
+    color: rgba(0, 0, 0, 0.69);
 }

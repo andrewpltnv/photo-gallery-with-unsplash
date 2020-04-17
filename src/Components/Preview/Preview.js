@@ -6,14 +6,11 @@ export default function Preview(props) {
   const [data,setData] = useState();
   useEffect(()=>{
     setData(ItemFactory(props.data));
-    console.log("!!!");
   },[props.data]);
 
   return (
-    <div className="wrapper">
-      <div className="preview">
-        {data?data.map((item,index)=>(itemRender(item.images,item.name,index))):<></>}
-      </div>
+    <div className="preview">
+      {data?data.map((item,index)=>(itemRender(item.images,item.name,index))):<></>}
     </div>
   );
   /*

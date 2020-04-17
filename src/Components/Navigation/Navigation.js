@@ -35,7 +35,7 @@ export default function Navigation(props) {
       {
         (page > 1)
           ?<button onClick={(event) => handleReducer("back", event)} >-</button>
-          :<></>
+          :<button style={{opacity:0}}/>
       }
     </form>
   );

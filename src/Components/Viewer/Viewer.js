@@ -7,7 +7,7 @@ export default function Viewer(props) {
 
   return (
     <div className="viewer">
-      <img className={"image--true"}
+      <img className={"image"}
            src={(props.image)?props.image.toString():placeholder2.toString()} alt=" "
       />
     </div>
