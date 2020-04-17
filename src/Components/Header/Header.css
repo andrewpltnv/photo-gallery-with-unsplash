@@ -3,13 +3,14 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding-top: 14px;
     padding-left: 34px;
-    margin-bottom: 4px;
+    margin-bottom: 16px;
 }
 .header--link{
     font-family: GENUINE, monospace ;
+    margin-right: 3.5vw;
     text-decoration: none;
     font-size: 32px;
     letter-spacing: 0.137em;

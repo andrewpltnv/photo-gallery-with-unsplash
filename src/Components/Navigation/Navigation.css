@@ -1,15 +1,16 @@
-.navigation{
-    width: 130px;
-    padding-right: 20px;
-    margin-left: 18px;
-    display: grid;
-    grid-template-columns: 40px 50px 45px;
+.controls{
+    display: flex;
     justify-content: space-between;
+    height: 40px;
+    width: 100%;
+    margin: auto;
 }
-.navigation button{
-    margin: 5px;
-    width: auto;
-    height: 32px;
-    background-color: rgba(108, 108, 108, 0.41);
-    color: rgba(0, 0, 0, 0.69);
+.nav{
+    height: 40px;
+    width: 40px;
+}
+.page--counter{
+    margin: auto;
+    font-size: 32px;
+    font-weight: 600;
 }

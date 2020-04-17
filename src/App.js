@@ -21,21 +21,24 @@ export default function App() {
   };
 
   useEffect(()=>{
-    unsplash.search.collections(word, page, 4)
+    unsplash.search.collections(word, page, 7)
       .then(toJson)
       .then(json => {
         setData(json.results);
+        console.log(json.results);
         setFlag(true);
       });
   },[page,word]);
 
-  return (
+  return(
     <div className="App">
-      <Header text={"Photo Gallery"} handleSearch={handleSearch}>
-        <Navigation page={page} total={20} handleNavigation={setPage}/>
-      </Header>
+      <Header text={"Photo Gallery"} handleSearch={handleSearch}/>
       <div id="space">
-        {flag?<Preview data={data} select={select}/>:<></>}
+        {
+          flag?<Preview data={data} select={select}>
+            <Navigation page={page} total={20} handleNavigation={setPage}/>
+          </Preview>:<></>
+        }
         <Viewer image={selected}/>
       </div>
       <Footer/>

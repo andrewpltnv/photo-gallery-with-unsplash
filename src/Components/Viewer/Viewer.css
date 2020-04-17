@@ -5,7 +5,7 @@
 }
 .image{
     object-fit: cover;
-    margin: 13px 12px 12px 12px;
+    margin: auto 12px 12px 12px;
     width: auto;
     max-height: 700px;
 }

@@ -1,25 +1,52 @@
+.author--icon{
+    border-radius: 30% 0;
+    border-color: rgb(103, 103, 103);
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-right-width: 3px;
+    border-right-style: solid;
+    border-left-width: 0.1em;
+    border-left-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 56px;
+    width: 56px;
+    filter:grayscale(1);
+}
+.author--icon:hover{
+    filter: grayscale(0);
+}
 .author--name{
     width: auto;
     height: 14px;
-    margin: 0;
-    padding: 0.3em 0.3em 0.3em 0.3em;
+    margin: -20px auto auto 2px;;
     text-align: center;
     font-family: Wandery, serif;
-    color: white;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 600;
     grid-column: 1 / 3;
 }
+.page--counter{
+    font-size: 1.3em;
+    font-weight: 400;
+}
 .buttons{
-    margin: auto auto auto auto;
+    margin: 0 auto 0 10px;
     width: 130px;
-    height: 130px;
+    height: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr min-content 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px min-content;
     gap: 6px;
 }
 .button{
-    height: 114%;
-    width: 96%;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto auto auto;
+    border-radius: 50%;
+    border-color: rgb(80, 80, 80);
+}
+.button:hover{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(111, 111, 111);
 }

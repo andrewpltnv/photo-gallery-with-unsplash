@@ -23,7 +23,7 @@
     width: 100% !important;
   }
   .preview{
-    height: 160px;
+    height: auto;
   }
 }
 

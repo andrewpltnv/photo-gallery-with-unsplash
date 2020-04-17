@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Navigation.css";
+import SkipPrevious from "@material-ui/icons/SkipPrevious";
+import SkipNext from "@material-ui/icons/SkipNext";
 
 export default function Navigation(props) {
   const total = props.total;
@@ -29,14 +31,20 @@ export default function Navigation(props) {
   };
 
   return(
-    <form className="navigation" id="navigation">
-      <button onClick={(event) => handleReducer("base", event)} >{page}</button>
-      <button onClick={(event) => handleReducer("next", event)} >+</button>
-      {
-        (page > 1)
-          ?<button onClick={(event) => handleReducer("back", event)} >-</button>
-          :<button style={{opacity:0}}/>
-      }
-    </form>
+    <div className="item--preview">
+      <div className="controls">
+        {(page > 1)
+          ?<button className="button nav" onClick={(event) => handleReducer("back", event)}>
+            <SkipPrevious fontSize="medium" color="action"/>
+          </button>
+          :<button className="button nav"/>
+        }
+        <h1 className="page--counter">{props.page}</h1>
+        <button className="button nav" onClick={(event) => handleReducer("next", event)}>
+          <SkipNext fontSize="medium" color="secondary"/>
+        </button>
+      </div>
+    </div>
+
   );
 }

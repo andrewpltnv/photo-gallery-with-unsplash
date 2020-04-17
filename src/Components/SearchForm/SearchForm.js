@@ -14,7 +14,7 @@ export default function SearchForm(props) {
 
   return(
     <form className="form" id="form" target="_self" onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} value={input} placeholder="Search" minLength="1" maxLength="10"/>
+      <input type="text" onChange={handleChange} value={input} placeholder="Search" minLength="1" maxLength="20"/>
       <button type="submit" onSubmit={handleSubmit} ><span><SearchIcon fontSize="large" color="action"/></span></button>
     </form>
   );
